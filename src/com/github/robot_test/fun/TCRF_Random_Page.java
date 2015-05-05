@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class TCRF_Random_Page {
 
-	private JFrame frame;
+	private JFrame frmTcrfRandomPage;
 
 	/**
 	 * Launch the application.
@@ -26,7 +26,7 @@ public class TCRF_Random_Page {
 			public void run() {
 				try {
 					TCRF_Random_Page window = new TCRF_Random_Page();
-					window.frame.setVisible(true);
+					window.frmTcrfRandomPage.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -66,11 +66,13 @@ public class TCRF_Random_Page {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 253, 217);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmTcrfRandomPage = new JFrame();
+		frmTcrfRandomPage.setResizable(false);
+		frmTcrfRandomPage.setTitle("TCRF Random Page");
+		frmTcrfRandomPage.setBounds(100, 100, 250, 150);
+		frmTcrfRandomPage.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		JButton btnNewButton = new JButton("RANDOM \n PAGE \n GOOOO");
+		JButton btnNewButton = new JButton("<html>RANDOM <br> PAGE <br> GOOOO</html>");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -84,7 +86,7 @@ public class TCRF_Random_Page {
 				}
 			}
 		});
-		frame.getContentPane().add(btnNewButton, BorderLayout.CENTER);
+		frmTcrfRandomPage.getContentPane().add(btnNewButton, BorderLayout.CENTER);
 		btnNewButton.setFont(new Font("Dialog", Font.PLAIN, 24));
 	}
 
